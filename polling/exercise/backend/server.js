@@ -36,6 +36,10 @@ app.post('/poll', function (req, res) {
     text,
     time: Date.now(),
   })
+
+  res.json({
+    status: 'ok',
+  })
 })
 
 // start the server
