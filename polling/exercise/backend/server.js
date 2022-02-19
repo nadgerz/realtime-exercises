@@ -29,6 +29,13 @@ app.get('/poll', function (req, res) {
 app.post('/poll', function (req, res) {
   const { user, text } = req.body // This will be from the form submit
   console.log({ user, text })
+
+  // add to the nanobuffer... which will lose older entries if needs be!
+  msg.push({
+    user,
+    text,
+    time: Date.now(),
+  })
 })
 
 // start the server
