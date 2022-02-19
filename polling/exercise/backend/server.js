@@ -21,8 +21,9 @@ app.use(bodyParser.json());
 app.use(express.static("frontend"));
 
 app.get("/poll", function (req, res) {
-  // use getMsgs to get messages to send back
-  // write code here
+  res.json({
+    msg: getMsgs(),
+  })
 });
 
 app.post("/poll", function (req, res) {
