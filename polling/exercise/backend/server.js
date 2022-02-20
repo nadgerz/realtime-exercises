@@ -45,4 +45,6 @@ app.post('/poll', function (req, res) {
 // start the server
 const port = process.env.PORT || 3000
 app.listen(port)
-console.log(`listening on http://localhost:${port}`)
+// const now = Date.now().toDateString()
+const now = new Date().toUTCString()
+console.log(`listening on http://localhost:${port} @ ${now}`)
