@@ -30,6 +30,8 @@ async function postNewMsg(user, text) {
 
   const res = await fetch('/poll', options)
   const json = await res.json()
+
+  return json
 }
 
 async function getNewMsgs() {
