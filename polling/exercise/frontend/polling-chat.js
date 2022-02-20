@@ -16,8 +16,8 @@ chat.addEventListener('submit', function (e) {
 
 async function postNewMsg(user, text) {
   const data = {
-    user: user,
-    text: text,
+    user,
+    text,
   }
 }
 
