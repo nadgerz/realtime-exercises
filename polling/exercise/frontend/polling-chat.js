@@ -20,8 +20,15 @@ async function postNewMsg(user, text) {
 }
 
 async function getNewMsgs() {
-  // poll the server
-  // write code here
+  let json
+
+  try {
+    const res = await fetch('/poll')
+    console.log(res)
+    json = await res.json()
+  } catch (e) {
+    console.error(e)
+  }
 }
 
 function render() {
