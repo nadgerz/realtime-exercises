@@ -15,8 +15,10 @@ chat.addEventListener('submit', function (e) {
 })
 
 async function postNewMsg(user, text) {
-  // post to /poll a new message
-  // write code here
+  const data = {
+    user: user,
+    text: text,
+  }
 }
 
 async function getNewMsgs() {
