@@ -19,6 +19,17 @@ async function postNewMsg(user, text) {
     user,
     text,
   }
+
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }
+
+  const res = await fetch('/poll', options)
+  const json = await res.json()
 }
 
 async function getNewMsgs() {
