@@ -27,7 +27,7 @@ async function getNewMsgs() {
     console.log(res)
     json = await res.json()
   } catch (e) {
-    console.error(e)
+    console.error(`getNewMsgs(): polling error`, e)
   }
 }
 
