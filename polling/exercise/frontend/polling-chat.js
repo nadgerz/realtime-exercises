@@ -39,8 +39,19 @@ async function getNewMsgs() {
 
   try {
     const res = await fetch('/poll')
-    console.log(res)
+    // console.log(res)
+    // console.log(res.body)
+    console.log(typeof res.body)
+    // const body = JSON.parse(res.body)
+    // var text = ''
+    // for (var key in body) {
+    //   text += 'Index is: ' + key + '\nDescription is:  ' + body[key]
+    // }
+    // // The Description is:  "descriptive string"
+    // console.log('Got a response: ', text)
+
     json = await res.json()
+    console.log(json)
   } catch (e) {
     console.error(`getNewMsgs(): polling error`, e)
   }
